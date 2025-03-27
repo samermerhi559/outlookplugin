@@ -19,8 +19,8 @@
   <DisplayName DefaultValue="SDSOutlookPlugin" />
   <Description DefaultValue="SDSOutlookPlugin"/>
 
-  <IconUrl DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon128.png"/>
+  <IconUrl DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Images/icon64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Images/icon128.png"/>
 
   <SupportUrl DefaultValue="http://www.contoso.com" />
   <!-- Domaines autorisés durant la navigation. Par exemple, si vous utilisez ShowTaskpane et un lien href, la navigation n'est autorisée que si le domaine figure sur cette liste. -->
@@ -41,7 +41,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/MessageRead.html"/>
+        <SourceLocation DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/MessageRead.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -123,14 +123,14 @@
 
       <Resources>
         <bt:Images>
-          <bt:Image id="icon16" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon16.png"/>
-          <bt:Image id="icon32" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon32.png"/>
-          <bt:Image id="icon80" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon80.png"/>
+          <bt:Image id="icon16" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Images/icon16.png"/>
+          <bt:Image id="icon32" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Images/icon32.png"/>
+          <bt:Image id="icon80" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Images/icon80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="functionFile" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Functions/FunctionFile.html"/>
-          <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/MessageRead.html"/>
-          <bt:Url id="loginTaskPaneUrl" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Login.html"/>
+          <bt:Url id="functionFile" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Functions/FunctionFile.html"/>
+          <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/MessageRead.html"/>
+          <bt:Url id="loginTaskPaneUrl" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Login.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>        
