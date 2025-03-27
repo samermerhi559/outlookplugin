@@ -135,7 +135,7 @@
     <Content Include="Images\Icon32.png" />
     <Content Include="Images\Icon64.png" />
     <Content Include="Images\Icon80.png" />
-    <Content Include="login.html" />
+    <Content Include="Login.html" />
     <Content Include="MessageRead.css" />
     <Content Include="MessageRead.html" />
     <Content Include="MessageRead.js" />

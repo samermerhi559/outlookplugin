@@ -12,7 +12,7 @@
   <!-- IMPORTANT ! L'ID doit être unique pour votre complément. Si vous réutilisez ce manifeste, veillez à remplacer cet ID par un nouveau GUID. -->
   <Id>dd6e42bc-107f-4fdc-abf9-7e172bafe474</Id>
 
-  <Version>1.0.0.2</Version>
+  <Version>1.0.0.3</Version>
   <ProviderName>[Nom du fournisseur]</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- Nom d'affichage de votre complément. Utilisé dans le Store et à divers endroits de l'interface utilisateur Office, par exemple la boîte de dialogue des compléments. -->
