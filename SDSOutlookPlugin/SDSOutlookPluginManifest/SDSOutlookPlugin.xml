@@ -130,7 +130,7 @@
         <bt:Urls>
           <bt:Url id="functionFile" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Functions/FunctionFile.html"/>
           <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/MessageRead.html"/>
-          <bt:Url id="loginTaskPaneUrl" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/Login.html"/>
+          <bt:Url id="loginTaskPaneUrl" DefaultValue="https://samermerhi559.github.io/outlookplugin/SDSOutlookPluginWeb/login.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>        
