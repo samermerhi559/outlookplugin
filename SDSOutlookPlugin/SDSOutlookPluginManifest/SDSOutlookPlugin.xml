@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
+<!-- Pour en savoir plus sur le manifeste XML des compléments Office, consultez https://go.microsoft.com/fwlink/?linkid=2252563. -->
+<OfficeApp 
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+          xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" 
+          xsi:type="MailApp">
+
+
+  <!-- IMPORTANT ! L'ID doit être unique pour votre complément. Si vous réutilisez ce manifeste, veillez à remplacer cet ID par un nouveau GUID. -->
+  <Id>dd6e42bc-107f-4fdc-abf9-7e172bafe474</Id>
+
+  <Version>1.0.0.2</Version>
+  <ProviderName>[Nom du fournisseur]</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <!-- Nom d'affichage de votre complément. Utilisé dans le Store et à divers endroits de l'interface utilisateur Office, par exemple la boîte de dialogue des compléments. -->
+  <DisplayName DefaultValue="SDSOutlookPlugin" />
+  <Description DefaultValue="SDSOutlookPlugin"/>
+
+  <IconUrl DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon128.png"/>
+
+  <SupportUrl DefaultValue="http://www.contoso.com" />
+  <!-- Domaines autorisés durant la navigation. Par exemple, si vous utilisez ShowTaskpane et un lien href, la navigation n'est autorisée que si le domaine figure sur cette liste. -->
+  <AppDomains>
+    <AppDomain>AppDomain1</AppDomain>
+    <AppDomain>AppDomain2</AppDomain>
+    <AppDomain>AppDomain3</AppDomain>
+  </AppDomains>
+  
+  <Hosts>
+    <Host Name="Mailbox" />
+  </Hosts>
+  <Requirements>
+    <Sets>
+      <Set Name="Mailbox" MinVersion="1.1" />
+    </Sets>
+  </Requirements>
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/MessageRead.html"/>
+        <RequestedHeight>250</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <Permissions>ReadWriteItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+  </Rule>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <bt:Sets DefaultMinVersion="1.3">
+          <bt:Set Name="Mailbox" />
+        </bt:Sets>
+      </Requirements>
+      <Hosts>
+        <Host xsi:type="MailHost">
+
+          <DesktopFormFactor>
+            <FunctionFile resid="functionFile" />
+
+            <ExtensionPoint xsi:type="MessageReadCommandSurface">
+              <OfficeTab id="TabDefault">
+                <Group id="msgReadGroup">
+                  <Label resid="groupLabel" />
+                  <Control xsi:type="Button" id="msgReadOpenPaneButton">
+                    <Label resid="taskPaneButtonLabel" />
+                    <Supertip>
+                      <Title resid="taskPaneButtonLabel" />
+                      <Description resid="taskPaneButtonDescription" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="icon16" />
+                      <bt:Image size="32" resid="icon32" />
+                      <bt:Image size="80" resid="icon80" />
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="messageReadTaskPaneUrl" />
+                    </Action>
+                  </Control>
+                  <Control xsi:type="Button" id="msgReadHelloWorldButton">
+                    <Label resid="helloWorldButtonLabel"/>
+                    <Supertip>
+                      <Title resid="helloWorldButtonLabel"/>
+                      <Description resid="helloWorldButtonDescription"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="icon16"/>
+                      <bt:Image size="32" resid="icon32"/>
+                      <bt:Image size="80" resid="icon80"/>
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>showHelloWorldMessage</FunctionName>
+                    </Action>
+                  </Control>
+                  <Control xsi:type="Button" id="msgReadLoginButton">
+                    <Label resid="loginButtonLabel" />
+                    <Supertip>
+                      <Title resid="loginButtonLabel" />
+                      <Description resid="loginButtonDescription" />
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="icon16" />
+                      <bt:Image size="32" resid="icon32" />
+                      <bt:Image size="80" resid="icon80" />
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="loginTaskPaneUrl" />
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+          </DesktopFormFactor>
+        </Host>
+      </Hosts>
+
+      <Resources>
+        <bt:Images>
+          <bt:Image id="icon16" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon16.png"/>
+          <bt:Image id="icon32" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon32.png"/>
+          <bt:Image id="icon80" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Images/icon80.png"/>
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="functionFile" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Functions/FunctionFile.html"/>
+          <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/MessageRead.html"/>
+          <bt:Url id="loginTaskPaneUrl" DefaultValue="https://sdsoutlookpluginweb20250320161204-djcgh7ckdnh4g8d8.canadacentral-01.azurewebsites.net/Login.html"/>
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>        
+          <bt:String id="taskPaneButtonLabel" DefaultValue="Show task pane"/>
+          <bt:String id="actionButtonLabel" DefaultValue="Run Function"/>
+          <bt:String id="helloWorldButtonLabel" DefaultValue="Hello World"/>
+          <bt:String id="loginButtonLabel" DefaultValue="ERP Login"/>
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="taskPaneButtonDescription" DefaultValue="Opens a task pane."/>
+          <bt:String id="actionButtonDescription" DefaultValue="Click to run a sample function."/>
+          <bt:String id="helloWorldButtonDescription" DefaultValue="Click to display a Hello World message."/>
+          <bt:String id="loginButtonDescription" DefaultValue="Login to the ERP system."/>
+        </bt:LongStrings>
+      </Resources>
+    </VersionOverrides>
+  </VersionOverrides>
+</OfficeApp>
